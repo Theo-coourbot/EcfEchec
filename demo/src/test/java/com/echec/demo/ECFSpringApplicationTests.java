@@ -1,4 +1,4 @@
-package com.todo.demo;
+package com.echec.demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

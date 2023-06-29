@@ -1,4 +1,4 @@
-package com.todo.demo.entity;
+package com.echec.demo.entity;
 
 
 import jakarta.persistence.*;
@@ -35,9 +35,9 @@ public class User {
 
     private double score;
 
-    @ManyToMany
+    @ManyToMany(fetch =  FetchType.EAGER)
     private List<Part> parts;
 
-    private boolean admin;
+    private boolean admin = true;
 
 }

@@ -1,4 +1,4 @@
-package com.todo.demo.entity;
+package com.echec.demo.entity;
 
 
 import jakarta.persistence.*;
@@ -22,7 +22,7 @@ public class Part {
 
     private String title;
 
-    private boolean finish;
+    private boolean finish = false;
     private String winner;
 
     @ManyToMany

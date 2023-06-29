@@ -2,11 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>page Admin</title>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <title>profile</title>
 </head>
 <body>
 <div>
-<h1><span th:text="${user.getLastName() }"> </span>    <span th:text="${ user.getFirstName()}"></span></h1>
+    <h1><span th:text="${user.getLastName() }"> </span>    <span th:text="${ user.getFirstName()}"></span></h1>
 
     <p>votre age : </p>
     <p th:text="${user.getAge()}"></p>
@@ -15,12 +23,17 @@
     <div><p th:each="part: ${part}" th:text="${part.getTitle()}"></p></div>
 
 
-    <a th:href="${'/user/update'}">modifier</a>
+    <a th:href="${'/part/form'}">cree une partie</a>
+
+
     <a th:href="${'/part/list'}">toute les parties</a>
 
 
 
 </div>
+
+</body>
+</html>
 
 </body>
 </html>

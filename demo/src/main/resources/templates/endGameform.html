@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>endGame</title>
+</head>
+<body>
+<h1 th:text="'qui est le gagnant du tournoi ' + ${part.getTitle()} "></h1>
+
+
+
+
+<form method="post" th:action="@{endgame/form/post}">
+
+<select name="user"  id="participant" class="form-control">
+    <option th:each="user : ${part.getUsers()}"   th:value="${user.getIdUser()}" th:text="${user.getPseudo()}"></option>
+</select>
+    <input type="hidden" name="id" th:value="${part.getIdMatch()}">
+
+    <button class="btn btn-outline-info mt-3">envoyer</button>
+</form>
+</body>
+</html>

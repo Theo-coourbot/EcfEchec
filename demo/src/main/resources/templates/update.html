@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <title>updateUser</title>
+</head>
+<body>
+<form th:action="@{/user/update/post}" method="post" th:object="${user}">
+    <div th:if="${message != null}" class="col-6 justify-content-center m-1">
+        <div class="alert alert-danger">
+            <div th:text="${message}"></div>
+        </div>
+    </div>
+    <div class="col-6 justify-content-center m-1">
+        <input type="text" th:field="*{firstName}" class="form-control" id="firstname" placeholder="prenom">
+    </div>
+    <div class="col-6 justify-content-center m-1">
+        <input type="text" th:field="*{lastName}" placeholder="Votre nom" class="form-control p-1">
+    </div>
+    <div class="col-6 justify-content-center m-1">
+        <input type="text"th:field="*{email}" placeholder="Votre email" class="form-control p-1">
+    </div>
+    <div class="col-6 justify-content-center m-1">
+        <input type="text" th:field="*{pseudo}" placeholder="Votre pseudo de chessMaster" class="form-control p-1">
+    </div>
+    <div class="col-6 justify-content-center m-1">
+        <input type="number" th:field="*{age}" placeholder="Votre age" class="form-control p-1">
+    </div>
+    <div class="col-6 justify-content-center m-1">
+        <input type="password" th:field="*{password}" placeholder="Votre mot de passe" class="form-control p-1">
+    </div>
+    <input type="hidden" th:field="*{idUser}" class="form-control" id="id" >
+    <div class="col-6 justify-content-center m-1">
+        <button class="btn btn-primary p-1">modifier</button>
+    </div>
+</form>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,6 +1,6 @@
-package com.todo.demo.repository;
+package com.echec.demo.repository;
 
-import com.todo.demo.entity.Tournament;
+import com.echec.demo.entity.Tournament;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

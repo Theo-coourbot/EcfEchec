@@ -1,4 +1,4 @@
-package com.todo.demo.entity;
+package com.echec.demo.entity;
 
 
 import jakarta.persistence.*;
