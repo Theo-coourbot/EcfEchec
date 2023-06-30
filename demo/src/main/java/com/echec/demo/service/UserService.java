@@ -58,5 +58,9 @@ public class UserService {
 
     }
 
+    public List<User> rankingUser(){
+        return null;
+    }
+
 
 }

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>profile</title>
 </head>
-<body>
-<div>
-<h1><span th:text="${user.getLastName() }"> </span>    <span th:text="${ user.getFirstName()}"></span></h1>
+<body  class="bg-dark text-light">
+<div class="container">
+<h1 class="text-center"><span th:text="${user.getLastName() }"> </span>    <span th:text="${ user.getFirstName()}"></span></h1>
 
     <p>votre age : </p>
     <p th:text="${user.getAge()}"></p>
