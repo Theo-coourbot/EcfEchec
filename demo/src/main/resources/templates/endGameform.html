@@ -10,7 +10,7 @@
 
 
 
-<form method="post" th:action="@{endgame/form/post}">
+<form method="post" th:action="@{/part/post}">
 
 <select name="user"  id="participant" class="form-control">
     <option th:each="user : ${part.getUsers()}"   th:value="${user.getIdUser()}" th:text="${user.getPseudo()}"></option>

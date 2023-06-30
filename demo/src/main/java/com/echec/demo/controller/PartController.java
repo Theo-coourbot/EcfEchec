@@ -12,6 +12,7 @@ import com.echec.demo.repository.TournamentRepository;
 import com.echec.demo.repository.UserRepository;
 import com.echec.demo.service.PartService;
 import com.echec.demo.service.UserService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
+
 
 @Controller
 @RequestMapping("part")
@@ -66,7 +68,9 @@ public class PartController {
         return mv;
     }
 
-    @PostMapping("endgame/form/post")
+
+
+    @PostMapping("post")
     public String postEndPart(@RequestParam("user") User user ,@RequestParam("id") Integer id) throws UserNotExistException {
         Part part = _partService.findById(id);
 

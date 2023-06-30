@@ -17,7 +17,7 @@ public class TournamentController {
 
     @GetMapping("/")
     public ModelAndView getHome() throws TournamentNotExistException {
-//        _tournamentService.createTournament();
+      //  _tournamentService.createTournament();
         ModelAndView mv = new ModelAndView("home");
         mv.addObject( "tournament",_tournamentService.serchById(1));
         return mv;

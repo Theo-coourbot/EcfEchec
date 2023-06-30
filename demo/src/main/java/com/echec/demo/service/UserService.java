@@ -37,10 +37,9 @@ public class UserService {
 
     public boolean signIn(User user) throws UserNotExistException {
         try {
-
             User userSearch = _userRepository.findByPseudoAndPassword(user.getPseudo(), user.getPassword());
-//           userSearch.setAdmin(true);
-//           _userRepository.save(userSearch);
+           // userSearch.setAdmin(true);
+           //_userRepository.save(userSearch);
             return loginService.login(userSearch);
         } catch (Exception e){
             throw new UserNotExistException();

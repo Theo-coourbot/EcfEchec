@@ -41,6 +41,14 @@ public class UserController {
         _userService.update(user);
         return "redirect:/user/profile";
     }
+
+    @GetMapping("ranking")
+    public ModelAndView getRanking(){
+        //  User user =
+        ModelAndView mv = new ModelAndView("ranking");
+
+        return mv;
+    }
     @PostMapping("update/post")
     public ModelAndView postUpdate(){
         ModelAndView mv = new ModelAndView("update");
